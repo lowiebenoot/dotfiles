@@ -93,6 +93,10 @@ fi;
 PS1="\[\033]0;\w\007\]";
 PS1+="\[${bold}\]\n"; # newline
 
+# Add the time to the prompt
+PS1+="\[${hostStyle}\][\t] "
+
+
 # Add user name when logged in as root.
 if [[ "${USER}" == "root" ]]; then
 	PS1+="\[${red}\]\u"; # username
